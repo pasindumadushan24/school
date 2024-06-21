@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardForm" prefHeight="640.0" prefWidth="1060.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.Dashboard2Controller">
+
+   <children>
+
+      <!-- Dashboard Title -->
+      <HBox alignment="CENTER_LEFT" layoutX="30.0" layoutY="30.0" spacing="15.0" />
+
+      <!-- Summary Cards -->
+      <HBox layoutX="182.0" layoutY="90.0" spacing="20.0">
+         <children>
+
+            <!-- Total Student -->
+            <VBox prefHeight="100.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #17285c, #3888fd); -fx-background-radius: 50; -fx-padding: 15;">
+               <effect>
+                  <DropShadow color="rgba(0,0,0,0.2)" radius="8" />
+               </effect>
+               <children>
+                  <Label text="Total Students" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalStudent" alignment="CENTER" text="0" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+
+            <!-- Total Courses -->
+            <VBox prefHeight="100.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #17285c, #3888fd); -fx-background-radius: 50; -fx-padding: 15;">
+               <effect>
+                  <DropShadow color="rgba(0,0,0,0.2)" radius="8" />
+               </effect>
+               <children>
+                  <Label text="Total Courses" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="35.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalPrograms" alignment="CENTER" text="0" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+
+            <!-- Total Instructors -->
+            <VBox prefHeight="100.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #17285c, #3888fd); -fx-background-radius: 50; -fx-padding: 15;">
+               <effect>
+                  <DropShadow color="rgba(0,0,0,0.2)" radius="8" />
+               </effect>
+               <children>
+                  <Label text="Total Instructors" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="lblTotalInstructor" alignment="CENTER" text="0" textFill="white">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="90.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+
+         </children>
+      </HBox>
+
+      <!-- Bar Chart -->
+      <BarChart fx:id="BarChartStu" layoutX="194.0" layoutY="232.0" prefHeight="334.0" prefWidth="338.0">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis side="LEFT" />
+         </yAxis>
+      </BarChart>
+
+      <!-- Monthly Income -->
+      <HBox layoutX="650.0" layoutY="483.0" spacing="10.0">
+         <children>
+            <Label text="Monthly Income:" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblIncom" text="0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" prefHeight="45.0" prefWidth="1003.0" style="-fx-background-color: #1e3799;" text="Dashboard" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+
+   </children>
+   <padding>
+      <Insets left="30.0" />
+   </padding>
+</AnchorPane>

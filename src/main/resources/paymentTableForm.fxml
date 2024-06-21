@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="1010.0" style="-fx-background-color: #dfe6e9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.PaymentTableFormController">
+
+    <!-- Header -->
+    <HBox layoutX="50.0" layoutY="20.0" spacing="10.0" />
+
+    <!-- TableView -->
+    <TableView fx:id="tblPayments" editable="true" layoutX="83.0" layoutY="120.0" prefHeight="390.0" prefWidth="905.0" style="-fx-background-radius: 10;">
+        <columns>
+            <TableColumn fx:id="colPaymentId" prefWidth="121.33333587646484" text="Payment ID" />
+            <TableColumn fx:id="colStudent" prefWidth="139.3333282470703" text="Student ID" />
+            <TableColumn fx:id="colProgram" prefWidth="134.0" text="Course ID" />
+            <TableColumn fx:id="colAmount" prefWidth="193.99996948242188" text="Amount (Rs.)" />
+            <TableColumn fx:id="colDate" prefWidth="140.0" text="Date" />
+            <TableColumn fx:id="colStatus" prefWidth="176.66668701171875" text="Status" />
+        </columns>
+    </TableView>
+
+      <!-- Label -->
+      <Label layoutX="130.0" layoutY="51.0">
+          <font>
+              <Font name="DejaVu Serif Condensed Bold" size="24.0" />
+          </font>
+      </Label>
+   <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="43.0" prefWidth="1103.0" style="-fx-background-color: #1e3799;" text="All Payment" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="23.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtSearch" layoutX="733.0" layoutY="69.0" onKeyReleased="#txtSearchKeyReleased" prefWidth="250.0" promptText="Search by Student ID                  🔍" style="-fx-background-radius: 15;                               -fx-border-radius: 15;                               -fx-border-color: #468A9A;                               -fx-border-width: 2;                               -fx-padding: 5 10 5 10;                               -fx-font-size: 14;                               -fx-prompt-text-fill: #888;">
+      <padding>
+         <Insets right="100.0" />
+      </padding>
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font>
+   </TextField>
+   <Button fx:id="Payment" layoutX="911.0" layoutY="543.0" mnemonicParsing="false" onAction="#btnPaymentOnAction" style="-fx-background-radius: 10; -fx-background-color: #1F45FC;" text="Payment" textFill="WHITE">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Button>
+
+</AnchorPane>
