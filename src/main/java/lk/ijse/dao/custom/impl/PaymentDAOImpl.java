@@ -66,8 +66,6 @@ public class PaymentDAOImpl implements PaymentDAO {
 
 
 
-
-
     @Override
     public boolean update(Payment payment) {
         Session session = FactoryConfiguration.getInstance().getSession();
