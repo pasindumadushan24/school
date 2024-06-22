@@ -151,7 +151,7 @@ public class CourseFormController {
     }
 
     public boolean isValied() {
-        // Id eka skip (auto-generated)
+        // Id eka auto-generated
         if (!Regex.setTextColor(lk.ijse.util.TextField.NAME, txtName)) return false;
         if (!Regex.setTextColor(lk.ijse.util.TextField.MONTH, txtDuration)) return false;
         if (!Regex.setTextColor(lk.ijse.util.TextField.PRICE, txtFee)) return false;
@@ -192,7 +192,6 @@ public class CourseFormController {
                         program.getFee()));
             }
         }
-
         tblProgram.setItems(filteredList);
     }
 
