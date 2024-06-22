@@ -12,4 +12,5 @@ public class courseTM {
     private String programName;
     private String duration;
     private double fee;
+
 }
