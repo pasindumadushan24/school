@@ -9,6 +9,7 @@ public class DAOFactory {
         PROGRAM,STUDENT,QUERY,ENROLLMENT,USER,COURSE,INSTRUCTOR,LESSON,PAYMENT
     }
 
+
     public static SuperDAO getDAO(DAOType daoType){
         return switch (daoType) {
             case PROGRAM -> new CourseDAOImpl();
