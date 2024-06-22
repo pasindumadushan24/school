@@ -47,6 +47,7 @@ public class CourseFormController {
         setCellValueFactory();
         txtId.setText(programBO.generateProgramId()); // auto-generate ID
         loadAllPrograms();
+
     }
 
     private void setCellValueFactory() {
