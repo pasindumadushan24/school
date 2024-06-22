@@ -18,6 +18,7 @@ public class Instructor {
     @Id
     private String instructorId;  // String ID, manually assign
 
+
     @Column(nullable = false)
     private String name;
 
