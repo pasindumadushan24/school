@@ -88,6 +88,7 @@ public class SignUpFormController {
             }
 
             inputUserName.clear();
+
             inputPassword.clear();
             adminCheckBox.setSelected(false);
             admissionCheckBox.setSelected(false);
