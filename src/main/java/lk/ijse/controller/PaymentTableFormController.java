@@ -81,6 +81,7 @@ public class PaymentTableFormController {
         loadPayments();
     }
 
+
     private void loadPayments() {
         paymentList.clear();
         try {
