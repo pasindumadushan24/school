@@ -23,6 +23,8 @@ public class PaymentFormController {
 
     @FXML
     public void initialize() {
+
+
         // Generate Payment ID
 
         cmbStudent.setOnAction(e -> updateAmount());
