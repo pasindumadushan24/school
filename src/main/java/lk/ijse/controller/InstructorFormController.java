@@ -137,6 +137,10 @@ public class InstructorFormController {
         }
 
         tblInstructor.setItems(filteredList);
+
+
     }
+
+
 
 }
