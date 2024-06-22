@@ -147,6 +147,7 @@ public class MainFormController {
             button.setScaleY(1.1);
         });
 
+
         button.setOnMouseExited(event -> {
             button.setScaleX(1.0);
             button.setScaleY(1.0);
