@@ -25,19 +25,11 @@ public class LessonDAOImpl implements LessonDAO {
     public void updateLesson(Lesson lesson) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
-        session.merge(lesson);  // merge ensures detached entities are updated
+        session.merge(lesson);  // entities update karanawa
         tx.commit();
         session.close();
     }
 
-//    @Override
-//    public void deleteLesson(Lesson lesson) {
-//        Session session = FactoryConfiguration.getInstance().getSession();
-//        Transaction tx = session.beginTransaction();
-//        session.delete(lesson);
-//        tx.commit();
-//        session.close();
-//    }
 
 
     @Override
@@ -45,11 +37,10 @@ public class LessonDAOImpl implements LessonDAO {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction tx = session.beginTransaction();
 
-        // Re-fetch a managed Lesson entity from DB using its ID
         Lesson persistentLesson = session.get(Lesson.class, lesson.getLessonId());
 
         if (persistentLesson != null) {
-            session.delete(persistentLesson); // delete the managed entity
+            session.delete(persistentLesson); // delete karanawa entity
         }
 
         tx.commit();
@@ -77,6 +68,7 @@ public class LessonDAOImpl implements LessonDAO {
         session.close();
         return lesson;
     }
+
 
     @Override
     public String getLastLessonId() {
