@@ -11,33 +11,14 @@ import java.util.List;
 
 public class PaymentDAOImpl implements PaymentDAO {
 
-//    @Override
-//    public boolean save(Payment payment) {
-//        Session session = FactoryConfiguration.getInstance().getSession();
-//        Transaction transaction = session.beginTransaction();
-//        session.save(payment);
-//        transaction.commit();
-//        session.close();
-//        return true;
-//    }
-//@Override
-//public boolean save(Payment payment) {
-//    Session session = FactoryConfiguration.getInstance().getSession();
-//    Transaction transaction = session.beginTransaction();
-//
-//    session.saveOrUpdate(payment);  // <-- මෙන්න මෙතන main fix එක
-//
-//    transaction.commit();
-//    session.close();
-//    return true;
-//}
+
 
     @Override
     public boolean save(Payment payment) {
         Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
-        session.saveOrUpdate(payment); // <-- Insert or Update automatically
+        session.saveOrUpdate(payment); // Insert  Update automa karanawa
 
         transaction.commit();
         session.close();
