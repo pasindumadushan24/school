@@ -60,6 +60,7 @@ public class SignUpFormController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
     }
 
     @FXML
